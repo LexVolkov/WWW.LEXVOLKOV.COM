@@ -11,42 +11,186 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Outfit:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="atmosphere" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
+    <div class="ember-field" aria-hidden="true">
+      <div class="ember-field__core"></div>
+      <div class="ember-field__haze"></div>
+      <canvas class="sparks" id="sparks"></canvas>
+    </div>
 
     <main class="stage">
-      <p class="brand">Lex Volkov</p>
-      <h1 class="headline">Проєкти, звʼязок і музика в одному місці.</h1>
-      <p class="lede">Обери, куди піти далі.</p>
+      <header class="hero">
+        <p class="brand" aria-label="Lex Volkov">
+          <span class="brand__line" data-text="Lex">Lex</span>
+          <span class="brand__line" data-text="Volkov">Volkov</span>
+        </p>
+        <p class="lede">Проєкти, звʼязок і музика.</p>
+      </header>
 
-      <nav class="links" aria-label="Посилання">
-        <a class="link" href="https://qc.rps.pp.ua/" target="_blank" rel="noopener noreferrer">
-          <span class="link__label">RPS</span>
-          <span class="link__hint">qc.rps.pp.ua</span>
-        </a>
-        <a class="link" href="https://lv-smart-garden.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <span class="link__label">Smart Garden</span>
-          <span class="link__hint">lv-smart-garden</span>
-        </a>
-        <a class="link" href="https://t.me/Lex_Volkov" target="_blank" rel="noopener noreferrer">
-          <span class="link__label">Telegram</span>
-          <span class="link__hint">@Lex_Volkov</span>
-        </a>
-        <a class="link" href="https://t.me/lex_volkov_blog" target="_blank" rel="noopener noreferrer">
-          <span class="link__label">Блог</span>
-          <span class="link__hint">Темний ліс</span>
-        </a>
-        <a class="link" href="https://music.youtube.com/@lex_volkov" target="_blank" rel="noopener noreferrer">
-          <span class="link__label">YouTube Music</span>
-          <span class="link__hint">@lex_volkov</span>
-        </a>
-      </nav>
+      <section class="projects" aria-label="Проєкти">
+        <article class="project">
+          <button type="button" class="project__toggle" aria-expanded="false">
+            <span class="project__title">RPS</span>
+            <span class="project__chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project__panel">
+            <div class="project__panel-inner">
+              <p class="project__text">
+                Платформа гейміфікації для організацій: ігри, тести, магазин
+                нагород і системи лояльності — кожна організація на своєму
+                піддомені.
+              </p>
+              <a
+                class="project__go"
+                href="https://qc.rps.pp.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Перейти на сайт
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <button type="button" class="project__toggle" aria-expanded="false">
+            <span class="project__title">Smart Garden</span>
+            <span class="project__chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project__panel">
+            <div class="project__panel-inner">
+              <p class="project__text">
+                Цифровий агроном: сад і рослини, історія догляду, AI-чат у
+                контексті твого саду та нагадування в Telegram.
+              </p>
+              <a
+                class="project__go"
+                href="https://lv-smart-garden.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Перейти на сайт
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <button type="button" class="project__toggle" aria-expanded="false">
+            <span class="project__title">Блог</span>
+            <span class="project__chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project__panel">
+            <div class="project__panel-inner">
+              <p class="project__text">
+                Telegram-канал «Темний ліс» — тихі нотатки, настрій і слова без
+                шуму стрічки.
+              </p>
+              <p class="project__text project__text--soft">
+                Це місце для відпочинку душі. ❤️‍🩹<br />
+                Коли захочеться просто поставити світ на паузу — заходь сюди, і
+                я тебе обійму. 🤗
+              </p>
+              <a
+                class="project__go"
+                href="https://t.me/lex_volkov_blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Перейти в канал
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <button type="button" class="project__toggle" aria-expanded="false">
+            <span class="project__title">YouTube Music</span>
+            <span class="project__chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project__panel">
+            <div class="project__panel-inner">
+              <p class="project__text">
+                Музика Lex Volkov на YouTube Music. Альбом «Темний ліс» —
+                психофольклорний хоррор-реп-мюзикл про шлях крізь власних
+                монстрів. «Cats And Dragons» — темні казкові rock-балади про
+                силу без зрілості й ціну позиченої влади.
+              </p>
+              <a
+                class="project__go"
+                href="https://music.youtube.com/@lex_volkov"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Слухати
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <button type="button" class="project__toggle" aria-expanded="false">
+            <span class="project__title">StoryCollab</span>
+            <span class="project__badge">В розробці</span>
+            <span class="project__chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project__panel">
+            <div class="project__panel-inner">
+              <p class="project__text">
+                Платформа для спільного написання історій: автори пишуть
+                фрагменти по черзі — і сюжет росте несподівано, як живий
+                текстовий серіал.
+              </p>
+              <p class="project__soon">Сайт ще в розробці.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="contacts" aria-label="Контакти">
+        <p class="contacts__label">Контакти</p>
+        <ul class="contacts__list">
+          <li>
+            <a
+              class="contacts__link"
+              href="https://t.me/Lex_Volkov"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Telegram · @Lex_Volkov
+            </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="contacts__link contacts__mail"
+              id="mail-btn"
+              data-u="mocvoklovxel"
+              data-d="moc.liamg"
+              aria-label="Показати email"
+            >
+              Email · натисни, щоб відкрити
+            </button>
+          </li>
+          <li>
+            <a
+              class="contacts__link"
+              href="https://www.instagram.com/lex_volkov/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram · @lex_volkov
+            </a>
+          </li>
+        </ul>
+      </footer>
     </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>
