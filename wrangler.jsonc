@@ -4,5 +4,11 @@
   "compatibility_date": "2026-09-05",
   "assets": {
     "directory": "./public"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "www.lexvolkov.com",
+      "custom_domain": true
+    }
+  ]
 }
